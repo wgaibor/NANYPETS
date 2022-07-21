@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">NannyPets</string>
     <string name="strNombrePresentacion">!Bienvenido a nanypets!</string>
+    <string name="mi_perfil">Mi perfil</string>
+    <string name="mi_mascota">Mis Mascotas</string>
+    <string name="seleccione_opcion">Seleccione una opción</string>
+    <string name="agenda">Agenda para campeón</string>
+    <string name="vacunas">Cartilla de vacunas</string>
+    <string name="alimentacion">Alimentación</string>
+    <string name="opinion">¡Denos su opinión!</string>
 </resources>

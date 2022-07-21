@@ -11,6 +11,7 @@ import android.view.View;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
@@ -18,19 +19,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN = 200;
+    SignInButton signInButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        signInButton = findViewById(R.id.sign_in_button);
+        signInButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.sign_in_button:
-                signIn();
+                llamarALaSiguiente();
+                //signIn();
                 break;
         }
+    }
+
+    private void llamarALaSiguiente() {
+        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+        startActivity(intent);
     }
 
     private void signIn() {
